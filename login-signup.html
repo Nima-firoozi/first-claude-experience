@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود | ثبت‌نام</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="relative overflow-x-hidden text-[var(--ink)]">
+
+  <div class="blob w-[420px] h-[420px] -top-32 -left-32"></div>
+  <div class="blob w-[380px] h-[380px] -bottom-40 -right-24"></div>
+
+  <main class="min-h-svh flex items-center justify-center px-4 py-10">
+    <div class="w-full max-w-md">
+
+      <div class="mb-8 text-center">
+        <div class="inline-flex items-center gap-2 mb-3">
+          <span
+            class="w-9 h-9 rounded-xl bg-[var(--yellow)] text-[#151300] font-display font-extrabold flex items-center justify-center text-lg">آ</span>
+        </div>
+        <h1 class="font-display font-extrabold text-2xl tracking-tight">به کندو خوش اومدی</h1>
+        <p class="text-sm text-[var(--muted)] mt-1">هر قدمت این‌جا ثبت می‌مونه</p>
+      </div>
+
+      <div class="scene">
+        <div id="flipper" class="flipper relative w-full" style="min-height:460px;">
+
+          <!-- FRONT: LOGIN -->
+          <section class="face absolute inset-0 rounded-3xl glass p-7 sm:p-9 flex flex-col">
+            <h2 class="font-display font-bold text-xl mb-1">ورود به حساب</h2>
+            <p class="text-sm text-[var(--muted)] mb-6">نام کاربری و رمزت رو وارد کن</p>
+
+            <form class="flex flex-col gap-4" onsubmit="return false;">
+              <label class="flex flex-col gap-1.5">
+                <span class="text-xs text-[var(--muted)]">نام کاربری</span>
+                <input type="text" placeholder="مثلاً reza_dev"
+                  class="field rounded-xl px-4 py-3 text-sm text-[var(--ink)] placeholder:text-[var(--muted)]" />
+              </label>
+              <label class="flex flex-col gap-1.5">
+                <span class="text-xs text-[var(--muted)]">رمز عبور</span>
+                <input type="password" placeholder="••••••••"
+                  class="field rounded-xl px-4 py-3 text-sm text-[var(--ink)] placeholder:text-[var(--muted)]" />
+              </label>
+
+              <div class="flex items-center justify-between text-xs text-[var(--muted)] -mt-1">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="accent-[var(--yellow)] w-3.5 h-3.5" />
+                  مرا به‌خاطر بسپار
+                </label>
+                <a href="#"
+                  class="link-yellow underline underline-offset-4 decoration-transparent hover:decoration-current">رمز
+                  رو فراموش کردی؟</a>
+              </div>
+
+              <button type="submit" class="btn-primary rounded-xl py-3 text-sm font-bold mt-2">ورود</button>
+            </form>
+
+            <div class="flex items-center gap-3 my-6">
+              <span class="h-px flex-1 dot-rule"></span>
+              <span class="text-xs text-[var(--muted)]">یا</span>
+              <span class="h-px flex-1 dot-rule"></span>
+            </div>
+
+            <p class="text-center text-sm text-[var(--muted)] mt-auto">
+              حساب کاربری نداری؟
+              <button id="toSignup" class="link-yellow font-semibold hover:underline underline-offset-4">بساز</button>
+            </p>
+          </section>
+
+          <!-- BACK: SIGNUP -->
+          <section class="face face-back absolute inset-0 rounded-3xl glass p-7 sm:p-9 flex flex-col">
+            <h2 class="font-display font-bold text-xl mb-1">ساخت حساب جدید</h2>
+            <p class="text-sm text-[var(--muted)] mb-6">چند قدم تا شروع فاصله داری</p>
+
+            <form class="flex flex-col gap-3.5" onsubmit="return false;">
+              <label class="flex flex-col gap-1.5">
+                <span class="text-xs text-[var(--muted)]">نام کاربری</span>
+                <input type="text" placeholder="یک نام کاربری انتخاب کن"
+                  class="field rounded-xl px-4 py-3 text-sm text-[var(--ink)] placeholder:text-[var(--muted)]" />
+              </label>
+              <label class="flex flex-col gap-1.5">
+                <span class="text-xs text-[var(--muted)]">ایمیل</span>
+                <input type="email" placeholder="name@example.com"
+                  class="field rounded-xl px-4 py-3 text-sm text-[var(--ink)] placeholder:text-[var(--muted)]" />
+              </label>
+              <label class="flex flex-col gap-1.5">
+                <span class="text-xs text-[var(--muted)]">رمز عبور</span>
+                <input type="password" placeholder="حداقل ۸ کاراکتر"
+                  class="field rounded-xl px-4 py-3 text-sm text-[var(--ink)] placeholder:text-[var(--muted)]" />
+              </label>
+              <label class="flex flex-col gap-1.5">
+                <span class="text-xs text-[var(--muted)]">تکرار رمز عبور</span>
+                <input type="password" placeholder="رمز رو دوباره وارد کن"
+                  class="field rounded-xl px-4 py-3 text-sm text-[var(--ink)] placeholder:text-[var(--muted)]" />
+              </label>
+
+              <button type="submit" class="btn-primary rounded-xl py-3 text-sm font-bold mt-2">ساخت حساب کاربری</button>
+            </form>
+
+            <p class="text-center text-sm text-[var(--muted)] mt-auto pt-6">
+              قبلاً حساب ساختی؟
+              <button id="toLogin" class="link-yellow font-semibold hover:underline underline-offset-4">وارد شو</button>
+            </p>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
